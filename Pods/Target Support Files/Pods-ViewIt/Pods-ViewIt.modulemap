@@ -1,6 +1,0 @@
-framework module Pods_ViewIt {
-  umbrella header "Pods-ViewIt-umbrella.h"
-
-  export *
-  module * { export * }
-}
