@@ -7,23 +7,47 @@
 //
 
 import UIKit
+import CoreData
+import SwiftyJSON
+import SlideMenuControllerSwift
 
-class TVShowTableController: UITableViewController {
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+    
+class TVShowTableController: UITableViewController, SlideMenuController {
+    
+    
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
 
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
+        
+    
+    
 
     // MARK: - Table view data source
 
@@ -92,4 +116,5 @@ class TVShowTableController: UITableViewController {
     }
     */
 
+}
 }
